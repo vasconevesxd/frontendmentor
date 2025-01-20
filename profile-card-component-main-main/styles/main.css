@@ -1,0 +1,159 @@
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --darker-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+
+    --white: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("../fonts/KumbhSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Kumbh Sans Bold";
+  src: url("../fonts/KumbhSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans";
+  line-height: 1.3;
+  font-size: 0.9333rem;
+  color: var(--dark-grayish-blue);
+  letter-spacing: 0.1rem;
+  background-color: var(--dark-cyan);
+  background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
+  background-position: 104% 218%, -11% -165%;
+  background-repeat: no-repeat, no-repeat;
+}
+
+h1{
+    font-size: 1.2rem;
+    color: var(--darker-desaturated-blue);
+}
+
+h2{
+    font-size: 1.0667rem;
+    font-weight: 400;
+}
+
+.pl-3{
+    padding-left: 14px;
+}
+
+.mt-0{
+  margin-top: 0;
+}
+
+.mt-1{
+  margin-top: 10px;
+}
+
+.mt-5{
+
+  margin-top: 50px;
+}
+.mb-0{
+  margin-bottom: 0;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+}
+
+.middle{
+    display: grid;
+    place-content: center;
+}
+
+.body-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin-top: 200px;
+  width: 350px;
+  height: auto;
+  background-color: var(--white);
+  border-radius: 1.0667rem; 
+}
+
+
+
+.card__header {
+    width: 100%;
+    height: 160px;
+    background-image: url('../images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 1.0667rem 1.0667rem 0 0; 
+    
+}
+
+.card__body {
+  border-bottom: 1px solid #e8e8e8;
+  height: 180px;
+  display: grid;
+  place-content: center;
+
+}
+
+.card__body,
+img {
+  text-align: center;
+}
+
+img{
+    border-radius: 50%; 
+    border: 5px solid var(--white);
+    z-index: 99;
+    position: relative;
+    top: 65%;
+    left:35%;
+}
+
+.card__footer {
+    padding: 10px 40px;
+}
+
+.status-group {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+}
+
+@media only screen and (min-width: 96rem ) {
+
+  body{
+    background-position: -4% 142%, 107% -124%; 
+  
+  }
+  .card {
+    margin-top: 200px;
+    width: 400px;
+    height: auto;
+    background-color: var(--white);
+    border-radius: 1.0667rem; 
+  }
+}

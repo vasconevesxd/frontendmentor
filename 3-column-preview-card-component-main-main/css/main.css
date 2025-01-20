@@ -1,0 +1,136 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --darker-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --lightener-gray: hsl(0, 0%, 95%);
+}
+
+@font-face {
+  font-family: LexendDeca;
+  src: url("../fonts/LexendDeca-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: BigShouldersDisplay;
+  src: url("../fonts/BigShouldersDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+html {
+  box-sizing: initial;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  background-color: var(--lightener-gray);
+  font-family: "LexendDeca";
+  color: var(--transparent-white);
+  line-height: 1.6;
+
+}
+
+.container {
+  margin: 6.6667rem auto;
+  width: 80%;
+}
+
+
+.card {
+  padding: 30px;
+  height: auto;
+}
+
+#sedans {
+  background-color: var(--bright-orange);
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+#suvs {
+  background-color: var(--dark-cyan);
+}
+#luxury {
+  background-color: var(--darker-cyan);
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+h1 {
+  color: var(--lightener-gray);
+  text-transform: uppercase;
+  font-family: "BigShouldersDisplay";
+  font-size: 2rem;
+}
+
+.button {
+  border-radius: 1.6667rem;
+  background-color: var(--lightener-gray);
+  border: 0;
+  padding: 0.6333rem 1.6667rem;
+  font-weight: 600;
+  border: 0.1333rem solid transparent;
+   cursor: pointer;
+}
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  background-color: transparent;
+  color: var(--lightener-gray);
+  border: 0.1333rem solid var(--lightener-gray);
+  cursor: pointer;
+}
+
+.button-sedans {
+  color: var(--bright-orange);
+}
+
+.button-suvs {
+  color: var(--dark-cyan);
+}
+
+.button-luxury {
+  color: var(--darker-cyan);
+}
+
+@media (min-width: 90rem) {
+  .container {
+    width: 50%;
+    margin: 13.3333rem auto;
+
+  }
+  .card-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .card {
+
+    height: auto;
+  }
+  .button{
+    padding: 0.9333rem 2.6667rem;
+  }
+  #sedans {
+    border-radius: 0.4rem 0 0 0.4rem;
+  }
+
+  #luxury {
+    border-radius: 0 0.4rem 0.4rem 0;
+  }
+
+  .card__footer {
+    padding: 3.3333rem 0 2.6667rem 0;
+  }
+}
